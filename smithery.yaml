@@ -1,0 +1,18 @@
+name: meok-abci-bridge-mcp
+description: "MEOK ABCI Bridge MCP — read-only Tendermint / Cosmos blockchain query for agents. 10 built-in mainnets + custom RPC. ABCI 1.0 + ABCI++. HMAC-signed."
+version: 1.0.0
+author: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/meok-abci-bridge-mcp
+license: MIT
+categories:
+  - blockchain
+  - cosmos
+  - agent
+  - read-only
+
+build:
+  type: python
+  entrypoint: server.py
+  dependencies:
+    - mcp
