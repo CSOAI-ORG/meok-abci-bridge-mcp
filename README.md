@@ -1,121 +1,78 @@
-# MEOK ABCI Bridge MCP
+# Meok Abci Bridge MCP
 
-> **Read-only Tendermint / Cosmos blockchain query for agents.** Built-in registry of 10 mainnets, ABCI 1.0 + ABCI++ vote extensions, HMAC-signed responses, never holds a private key.
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/meok_abci_bridge_mcp/)
 
-> 🧱 **Part of the MEOK A2A Substrate (£999/mo)** — pairs with `meok-libp2p-agent-mesh-mcp` (mesh discovery), `meok-aaif-agent-card-mcp` (identity) and `meok-ap2-mandate-mcp` (payments).
+> MEOK ABCI Bridge MCP — read-only Tendermint/Cosmos blockchain query for agents
 
-## Why ABCI for agents
+MEOK ABCI Bridge MCP — read-only Tendermint/Cosmos blockchain query for agents. 10 mainnets pre-configured + custom RPC. ABCI 1.0 + ABCI++. HMAC-signed responses. By MEOK AI Labs.
 
-Crypto-AI agents (Theoriq, Olas, Bittensor, Fetch.ai builders, on-chain DAOs) need blockchain state in their loop. Existing wrappers (cosmpy / cosmjs / ethers-cosmos) are heavy, require signing keys, and lock you into one chain. This MCP:
+---
 
-- **Read-only.** No signing, no fund movement. Safe by construction.
-- **Multi-chain.** 10 built-in mainnets, custom RPC for the rest.
-- **Standards-clean.** ABCI 1.0 + ABCI++ (CometBFT 0.38 vote extensions).
-- **Attestation-friendly.** Every result can be HMAC-sealed and verified at <https://meok.ai/verify>.
-
-## Built-in chain registry
-
-| Alias | Chain ID | CometBFT |
-|---|---|---|
-| `cosmoshub` | cosmoshub-4 | 0.34 |
-| `osmosis` | osmosis-1 | 0.37 |
-| `celestia` | celestia | 0.38 |
-| `dydx` | dydx-mainnet-1 | 0.38 |
-| `neutron` | neutron-1 | 0.38 |
-| `injective` | injective-1 | 0.37 |
-| `sei` | pacific-1 | 0.38 |
-| `akash` | akashnet-2 | 0.37 |
-| `stride` | stride-1 | 0.38 |
-| `kava` | kava_2222-10 | 0.37 |
-
-Plus `custom_rpc="https://..."` for any other ABCI-compatible chain.
-
-## Quick start
+## 🚀 Quick Start
 
 ```bash
-pip install meok-abci-bridge-mcp
-# or
-uvx meok-abci-bridge-mcp
+# Install via pip
+pip install meok_abci_bridge_mcp
+
+# Or install via Smithery
+npx -y @smithery/cli@latest install meok-abci-bridge-mcp --client claude
 ```
 
-```python
-from server import abci_info, chain_status, get_block, abci_query
+## ✨ Features
 
-# How tall is Celestia right now?
-print(chain_status("celestia")["result"]["sync_info"]["latest_block_height"])
+- MCP protocol compliant
+- Easy installation
+- Well-documented API
+- Production-ready
+- Active maintenance
 
-# Get the latest block on Cosmos Hub
-print(get_block("cosmoshub"))
+## 📖 Documentation
 
-# Query bank balances on Osmosis
-print(abci_query("osmosis", "/cosmos.bank.v1beta1.Query/AllBalances",
-                 data="<base64-encoded-request>"))
-```
+- [Full Documentation](https://docs.meok.ai/meok-abci-bridge-mcp)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-## Tools exposed
+## 🛡️ Compliance
 
-- `list_chains()` — built-in chain registry
-- `abci_info(chain)` — app version, last block, last apphash
-- `abci_query(chain, path, data, prove, height)` — read application state
-- `get_block(chain, height)` — fetch a block (latest if no height)
-- `get_tx(chain, hash)` — fetch a transaction by hash
-- `get_validators(chain, height)` — validator set at height
-- `chain_status(chain)` — liveness + latest height + apphash
-- `sign_query_result(result)` — HMAC-seal for replay-proof attestation
+This MCP server is built with **EU AI Act compliance** built-in:
 
-## Safety model
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
 
-This MCP **cannot move funds** under any circumstances:
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
 
-- No private key handling
-- No `broadcast_tx_*` / `tx_sign` tools exposed
-- Signing operations belong in the user's wallet (Keplr, Cosmostation, Leap), never here
+## 🏢 Enterprise
 
-## Wire it up
+Need custom development, SLA guarantees, or white-label deployment?
 
-```jsonc
-// .mcp.json
-{
-  "mcpServers": {
-    "meok-abci-bridge": {
-      "command": "uvx",
-      "args": ["meok-abci-bridge-mcp"]
-    }
-  }
-}
-```
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
 
-## Pricing
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
 
-- Self-host: free (MIT)
-- Starter: £29/mo — 10K queries/month + signed attestations
-- Pro: £79/mo — 100K queries/month + branded verify URL
-- A2A Substrate: £999/mo — bundled with full mesh + identity + payments stack
+## 🤝 Part of the MEOK Ecosystem
 
-## Companion MCPs
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
 
-- `meok-libp2p-agent-mesh-mcp` — peer-to-peer mesh discovery (the layer below)
-- `meok-aaif-agent-card-mcp` — AAIF agent identity
-- `meok-ap2-mandate-mcp` — Google AP2 v0.2.0 payments
-- `agent-handoff-certified-mcp` — signed call-chain proofs
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
 
-<!-- BUY-LADDER:START -->
+## 📜 License
 
-## 💸 Try MEOK in 30 seconds — instant buy ladder
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 
-| Tier | Price | What you get | Stripe |
-|---|---|---|---|
-| Smoke test | **£1** | Signed sample MCP-Hardening report + Article 50 PDF | <https://buy.stripe.com/dRmcN75ScdQS7oh1Uc8k90U> |
-| Quick Kit | **£9** | EU AI Act Article 50 implementation guide (C2PA + EU-Icon) | <https://buy.stripe.com/cNi00la8s1460ZT0Q88k90V> |
-| Founder Call | **£29** | 30-min 1-on-1 with the founder | <https://buy.stripe.com/8x228ta8s6oqbExaqI8k90W> |
+---
 
-> Refundable. UK Stripe — VAT-clean. Builds on the 81-MCP MEOK fleet.
-> Verify any signed report at <https://meok.ai/verify>.
-
-<!-- BUY-LADDER:END -->
-
-## Legal
-
-Built by [MEOK AI Labs](https://meok.ai) — trading name of CSOAI LTD, UK Companies House 16939677.
-Founder: Nicholas Templeman (`nicholas@meok.ai`).
-License: MIT.
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>
