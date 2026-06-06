@@ -17,6 +17,8 @@ License-File: LICENSE
 Requires-Dist: mcp[cli]>=1.3.0
 Dynamic: license-file
 
+mcp-name: io.github.CSOAI-ORG/meok-abci-bridge-mcp
+
 # MEOK ABCI Bridge MCP
 
 > **Read-only Tendermint / Cosmos blockchain query for agents.** Built-in registry of 10 mainnets, ABCI 1.0 + ABCI++ vote extensions, HMAC-signed responses, never holds a private key.
@@ -117,6 +119,21 @@ This MCP **cannot move funds** under any circumstances:
 - `meok-aaif-agent-card-mcp` — AAIF agent identity
 - `meok-ap2-mandate-mcp` — Google AP2 v0.2.0 payments
 - `agent-handoff-certified-mcp` — signed call-chain proofs
+
+<!-- BUY-LADDER:START -->
+
+## 💸 Try MEOK in 30 seconds — instant buy ladder
+
+| Tier | Price | What you get | Stripe |
+|---|---|---|---|
+| Smoke test | **£1** | Signed sample MCP-Hardening report + Article 50 PDF | <https://buy.stripe.com/dRmcN75ScdQS7oh1Uc8k90U> |
+| Quick Kit | **£9** | EU AI Act Article 50 implementation guide (C2PA + EU-Icon) | <https://buy.stripe.com/cNi00la8s1460ZT0Q88k90V> |
+| Founder Call | **£29** | 30-min 1-on-1 with the founder | <https://buy.stripe.com/8x228ta8s6oqbExaqI8k90W> |
+
+> Refundable. UK Stripe — VAT-clean. Builds on the 81-MCP MEOK fleet.
+> Verify any signed report at <https://meok.ai/verify>.
+
+<!-- BUY-LADDER:END -->
 
 ## Legal
 
