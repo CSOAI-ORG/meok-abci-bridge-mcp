@@ -2,8 +2,27 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.CSOAI-ORG/meok-abci-bridge-mcp",
   "version": "1.0.0",
-  "description": "MEOK ABCI Bridge MCP — read-only Tendermint / Cosmos blockchain query for agents. Built-in registry of 10 mainnets + custom RPC. ABCI 1.0 + ABCI++ vote extensions. HMAC-signed query results. By MEOK AI Labs.",
-  "repository": { "url": "https://github.com/CSOAI-ORG/meok-abci-bridge-mcp", "source": "github" },
-  "packages": [{ "registryType": "pypi", "identifier": "meok-abci-bridge-mcp", "version": "1.0.0", "runtimeHint": "python", "transport": { "type": "stdio" } }],
-  "remotes": [{ "type": "streamable-http", "url": "https://api.meok.ai/v1/dev/meok-abci-bridge", "auth": "bearer" }]
+  "description": "MEOK ABCI Bridge MCP \u2014 read-only Tendermint / Cosmos blockchain query for agents. Built-in registry",
+  "repository": {
+    "url": "https://github.com/CSOAI-ORG/meok-abci-bridge-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "meok-abci-bridge-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "python",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.meok.ai/v1/dev/meok-abci-bridge",
+      "auth": "bearer"
+    }
+  ]
 }
