@@ -1,0 +1,95 @@
+{
+  "name": "meok-abci-bridge-mcp",
+  "description": "MEOK ABCI Bridge MCP \u2014 read-only Tendermint / Cosmos blockchain query for agents. Built-in registry",
+  "url": "https://proofof.ai/scorecard/meok-abci-bridge-mcp.html",
+  "version": "1.0.0",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "list_chains",
+      "name": "List Chains",
+      "description": "list_chains via meok-abci-bridge-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "abci_info",
+      "name": "Abci Info",
+      "description": "abci_info via meok-abci-bridge-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "abci_query",
+      "name": "Abci Query",
+      "description": "abci_query via meok-abci-bridge-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_block",
+      "name": "Get Block",
+      "description": "get_block via meok-abci-bridge-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_tx",
+      "name": "Get Tx",
+      "description": "get_tx via meok-abci-bridge-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_validators",
+      "name": "Get Validators",
+      "description": "get_validators via meok-abci-bridge-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "chain_status",
+      "name": "Chain Status",
+      "description": "chain_status via meok-abci-bridge-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "sign_query_result",
+      "name": "Sign Query Result",
+      "description": "sign_query_result via meok-abci-bridge-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

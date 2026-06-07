@@ -1,0 +1,26 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "meok-abci-bridge-mcp",
+    "description": "MEOK ABCI Bridge MCP \u2014 read-only Tendermint / Cosmos blockchain query for agents. Built-in registry",
+    "version": "1.0.0",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "meok-abci-bridge-mcp"
+      }
+    ],
+    "capabilities": [
+      "list_chains",
+      "abci_info",
+      "abci_query",
+      "get_block",
+      "get_tx",
+      "get_validators",
+      "chain_status",
+      "sign_query_result"
+    ]
+  }
+}
