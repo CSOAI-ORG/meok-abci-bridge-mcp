@@ -1,0 +1,37 @@
+{
+  "name": "meok-abci-bridge-mcp",
+  "title": "Meok Abci Bridge Mcp",
+  "description": "MEOK ABCI Bridge MCP \u2014 read-only Tendermint / Cosmos blockchain query for agents. Built-in registry of 10 mainnets (Cosmos Hub, Osmosis, Celestia, dYdX, Neutron, Injective, Sei, Akash, Stride, Kava) + custom RPC. ABCI 1.0 + ABCI++ vote extensions. HMAC-signed query results. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "list_chains"
+    },
+    {
+      "name": "abci_info"
+    },
+    {
+      "name": "abci_query"
+    },
+    {
+      "name": "get_block"
+    },
+    {
+      "name": "get_tx"
+    },
+    {
+      "name": "get_validators"
+    },
+    {
+      "name": "chain_status"
+    },
+    {
+      "name": "sign_query_result"
+    }
+  ]
+}

@@ -1,2 +1,0 @@
-[console_scripts]
-meok-abci-bridge-mcp = server:main

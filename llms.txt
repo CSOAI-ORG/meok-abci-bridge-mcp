@@ -1,0 +1,24 @@
+# meok-abci-bridge-mcp
+
+> MEOK ABCI Bridge MCP — read-only Tendermint / Cosmos blockchain query for agents. Built-in registry of 10 mainnets (Cosmos Hub, Osmosis, Celestia, dYdX, Neutron, Injective, Sei, Akash, Stride, Kava) + custom RPC. ABCI 1.0 + ABCI++ vote extensions. HMAC-signed query results. By MEOK AI Labs.
+
+MCP server by MEOK AI Labs. Framework: fastmcp. Transport: stdio.
+
+## Tools
+- list_chains
+- abci_info
+- abci_query
+- get_block
+- get_tx
+- get_validators
+- chain_status
+- sign_query_result
+
+## Install
+```
+pip install meok-abci-bridge-mcp
+```
+
+## Links
+- PyPI: https://pypi.org/project/meok-abci-bridge-mcp/
+- Docs: https://meok.ai
