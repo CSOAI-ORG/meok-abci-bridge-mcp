@@ -1,3 +1,4 @@
+<!-- mcp-name: io.github.CSOAI-ORG/meok-abci-bridge-mcp -->
 [![MCP Scorecard: 76/100](https://img.shields.io/badge/proofof.ai-76%2F100-5b21b6)](https://proofof.ai/scorecard/meok-abci-bridge-mcp.html)
 
 # Meok Abci Bridge MCP
