@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: meok-abci-bridge-mcp
-Version: 1.0.0
+Version: 1.0.1
 Summary: MEOK ABCI Bridge MCP — read-only Tendermint / Cosmos blockchain query for agents. Built-in registry of 10 mainnets (Cosmos Hub, Osmosis, Celestia, dYdX, Neutron, Injective, Sei, Akash, Stride, Kava) + custom RPC. ABCI 1.0 + ABCI++ vote extensions. HMAC-signed query results. By MEOK AI Labs.
 Author-email: Nicholas Templeman <nicholas@meok.ai>
 License: MIT

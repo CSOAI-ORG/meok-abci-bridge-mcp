@@ -207,25 +207,6 @@ def _hmac_sign(payload: bytes) -> str:
 
 mcp = FastMCP("meok-abci-bridge")
 
-def _server_meter_check(api_key: str = "") -> dict:
-    """Calls the live /verify endpoint for server-side metering. Returns the JSON dict.
-    Fail-open: if /verify is unreachable or KV isn't configured, returns allowed=True
-    (so the local rate-limit in _check_rate_limit remains the safety net)."""
-    try:
-        data = json.dumps({"api_key": api_key, "tool": ""}).encode()
-        req = _meter_urlreq.Request(_METER_URL, data=data,
-            headers={"Content-Type": "application/json"}, method="POST")
-        with _meter_urlreq.urlopen(req, timeout=2.5) as r:
-            d = json.loads(r.read())
-            if isinstance(d, dict) and "allowed" in d:
-                return d
-    except Exception:
-        pass
-    return {"allowed": True, "tier": "anonymous", "remaining": 200, "upgrade_url": "https://meok.ai/pricing"}
-
-
-_METER_URL = "https://proofof.ai/verify"
-
 
 @mcp.tool()
 def list_chains() -> dict:

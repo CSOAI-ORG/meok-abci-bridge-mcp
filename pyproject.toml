@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "meok-abci-bridge-mcp"
-version = "1.0.0"
+version = "1.0.1"
 description = "MEOK ABCI Bridge MCP — read-only Tendermint / Cosmos blockchain query for agents. Built-in registry of 10 mainnets (Cosmos Hub, Osmosis, Celestia, dYdX, Neutron, Injective, Sei, Akash, Stride, Kava) + custom RPC. ABCI 1.0 + ABCI++ vote extensions. HMAC-signed query results. By MEOK AI Labs."
 readme = "README.md"
 license = { text = "MIT" }
