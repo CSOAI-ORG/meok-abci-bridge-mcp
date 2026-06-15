@@ -92,3 +92,28 @@ MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 Built by [MEOK AI Labs](https://meok.ai) — trading name of CSOAI LTD, UK Companies House 16939677.
 Founder: Nicholas Templeman (`nicholas@meok.ai`).
 License: MIT.
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "meok-abci-bridge-mcp": {
+      "command": "uvx",
+      "args": ["meok-abci-bridge-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install meok-abci-bridge-mcp` then run the `meok-abci-bridge-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `list_chains` to …"
+- "Use `abci_info` to …"
+- "Use `abci_query` to …"
