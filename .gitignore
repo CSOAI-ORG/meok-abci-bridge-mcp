@@ -11,3 +11,8 @@ __pycache__/server.cpython-311.pyc
 
 # Auto-added during alignment sweep
 *.pyc
+
+*_sigil.log
+bridge_sigil.log
+scoreboard_sigil.log
+__pycache__/
